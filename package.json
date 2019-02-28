@@ -1,7 +1,6 @@
 {
   "name": "lab5",
   "version": "1.0.0",
-  "description": "",
   "main": "lab5.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +9,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
-    "express": "^4.16.4"
-  }
+    "express": "^4.16.4",
+    "express-session": "^1.15.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NiranDx/lab5client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NiranDx/lab5client/issues"
+  },
+  "homepage": "https://github.com/NiranDx/lab5client#readme",
+  "description": ""
 }

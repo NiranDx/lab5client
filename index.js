@@ -1,31 +1,21 @@
-var express = require('express')
-var app = express()
+var express = require('express'),
+   app = express(),
+   bodyParser = require('body-parser');
+
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+app.use(express.static(__dirname + '/public'));
 
 app.set('views', './views')
-app.use(express.static(__dirname + '/img'));
 app.set('view engine', 'ejs')
 
-app.get('/computer', function (req, res) {
-    res.render('computer', {
-        computers: [
-            {
-                no: 'Windows',
-                p: '/1.jpg'
-            },
-            {
-                no: 'OSX',
-                p: '/2.jpg'
-            },
-            {
-                no: 'Android',
-                p: '/3.jpg'
-            },
-            {
-                no: 'IOS',
-                p: '/4.jpg'
-            }
+app.post('/admin', urlencodedParser, function(req, res){
+    if(req.body.user=='Niran' && req.body.pass=='1234'){
+        res.render('admin', {admins: ['Hello'] , foo: req.body.user, bt: 'Logout' })
+        
+    }
+    else {
+        res.render('admin', {admins: ['Please login first'] , foo:'', bt: 'Login'})
+    }
+ })
 
-        ]
-    })
-})
-app.listen(8000)
+app.listen(8000);
