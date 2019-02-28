@@ -2,13 +2,21 @@
 
 <head>
     <title>Admin</title>
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+    form{
+        text-align: center;
+        margin-top: 50px;
+        height: 30px;
+        width: 30%;
+        margin-left: 350px;
+    }</style>
 </head>
 <ul>
-    <form action="/form.html" method="get">
+    <form action="/logout" method="get" >
         <% admins.forEach(function(admin){ %>
         <h1><%= admin %> <%= foo %></h1>
-        <button  type="submit"><%= bt %></button>
+        <button  type="submit" class="btn btn-dark"><%= bt %></button>
         <% }); %>
     </form>
 

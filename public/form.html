@@ -2,13 +2,25 @@
 
 <head>
     <title>Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        div{
+            text-align: center;
+            margin-top: 50px;
+            height: 30px;
+            width: 30%;
+            margin-left: 380px;
+        }
+    </style>
 </head>
 <body>
     <div >
-        <form action="/admin" method="post">
-            <input type="text" name="user" placeholder="User"/><br />
-            <input type="password" name="pass" placeholder="Password"/><br></br>
-            <button type="submit">Login</button>
+        <form action="/admin" method="post"><div class="container">
+            <input type="text" name="user" placeholder="User" class="form-control"/><br />
+            <input type="password" name="pass" placeholder="Password" class="form-control"/><br></br>
+            <button type="submit" class="btn btn-info" >Login</button>
+        </div>
+            
         </form>
     </div>
 </body>
